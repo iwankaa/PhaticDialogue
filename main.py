@@ -24,7 +24,7 @@ def run():
         if verb_lemmas:
             response_candidates.extend(hamlet(vl) for vl in verb_lemmas)
         if adjective:
-            response_candidates.extend(reflect_adj(adj['text'], adj['sent']) for adj in adjs_sents)
+            response_candidates.extend(reflect_adj(adj['text'], adj['sent']) for adj in adjective)
         if not response_candidates:
             response_candidates.extend(dummy_phrases)
         random.shuffle(response_candidates)
